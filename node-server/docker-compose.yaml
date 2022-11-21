@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  node:
+    image: node:latest
+    working_dir: /usr/src/app
+    ports:
+      - 80:3000
+    volumes:
+      - ./:/usr/src/app
+    command: >
+      bash -c "npm install && node src/app.js"
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:3030
+    volumes:
+      - ./html:/usr/src/app
+      - ./default.conf:/etc/nginx/conf.d/default.conf

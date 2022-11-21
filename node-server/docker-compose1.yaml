@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: DockerfileNode
+    ports:
+      - 80:3000
+  nginx:
+    build:
+      context: .
+      dockerfile: DockerfileNginx
+    ports:
+      - 8080:3030
