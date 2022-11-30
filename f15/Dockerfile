@@ -1,5 +1,3 @@
 FROM tomcat:9-jdk8-corretto
-RUN yum update && yum install -y maven
-COPY eagle /usr/local/tomcat
-COPY maven.sh /usr/local/tomcat
-CMD [ "sh", "maven.sh" ]
+ENV ENV_NAME=ENV_VALUE
+COPY eagle/web-app/target/web-app.war /usr/local/tomcat/webapps

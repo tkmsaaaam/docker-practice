@@ -11,7 +11,10 @@ public class HelloServlet extends HttpServlet {
         
     PrintWriter out = res.getWriter();
     out.println("<html><body>");
-    out.println("<h1>Hello Servlet !!</h1>");
+    out.println("<h1>Hello !!</h1>");
+    out.println("<p>");
+    out.println(System.getenv("ENV_NAME"));
+    out.println("</p>");
     out.println("</body></html>");
   }
 }
