@@ -12,3 +12,7 @@ app.get("/", function(req, res, next){
       }
   ]);
 });
+
+app.get("/redirect", function(req, res, next){
+    res.redirect(req.headers.host + '/');
+});
