@@ -7,4 +7,4 @@ services:
     build:
       context: nginx
     ports:
-      - 3030:3030
+      - 80:3030
