@@ -1,7 +1,7 @@
 FROM ubuntu:22.10
 WORKDIR /usr/local/bin
 RUN apt-get update && apt-get install -y git
-COPY ./git-credential-github-token .
+COPY git-credential-github-token .
 RUN git config --global url."https://github.com/".insteadOf ssh://git@github.com/ \
   && git config --global credential.helper github-token && git config --global http.sslVerify false
 RUN chmod 744 git-credential-github-token
