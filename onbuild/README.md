@@ -1,5 +1,10 @@
 # onbuild
+- onbuildについて学ぶディレクトリ
 ### build
-- docker build . -t onbuild:latest
+```
+docker build . -t onbuild:latest
+```
 ### run
-- docker run onbuild:latest
+```
+docker run onbuild:latest
+```
